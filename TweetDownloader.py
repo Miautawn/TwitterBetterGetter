@@ -1,10 +1,12 @@
 from tweepy.streaming import StreamListener
-import datetime
 from tweepy import OAuthHandler
 from tweepy import Stream
+from urllib.request import urlopen
 import tweepy
 import TwitterCredentials as TC
 import json
+import re
+import TextPocessing
 
 
 auth = OAuthHandler(TC.consumer_key, TC.consumer_secret)
@@ -19,38 +21,28 @@ class TwitterAPI:
         listener = StdOutListener()
         stream = Stream(auth, listener)
         stream.filter(track=hash_tags)
-        print("Stream Started")
+        print("/////////////////////////////////////\n")
+        print("Stream Started...\n")
+        print("/////////////////////////////////////\n")
 
     def Search(self):
+        print("/////////////////////////////////////\n")
+        print("Beginning to download the timeline...\n")
+        print("/////////////////////////////////////\n")
         search_results = api.search(q=str(hash_tags), count=50, lang = "en", tweet_mode='extended')
-        clean_search = self.RefactorSearchResults(search_results)
-
-
-    def RefactorSearchResults(self, search):
-        clean_results = []
-        f = open("TimeStamp.txt", "r")
-        for tweet in search:
-            if "retweeted_status" in tweet._json:
-                clean_results.append(tweet._json["retweeted_status"]["full_text"])
-            else:
-                clean_results.append(tweet._json["full_text"])
-
-        f.close()
-        f = open("TimeStamp.txt", "w").write(str(search[0].created_at))
-        return clean_results
-
-
-
-
-
-
+        clean_search = set(TextPocessing.RefactorSearchResults(search_results))   #self.RefactorSearchResults(search_results)
+        print("/////////////////////////////////////\n")
+        print("downloading finished, beginning the stream...\n")
+        print("/////////////////////////////////////\n")
+        self.InitiateStream()
 
 
 class StdOutListener(StreamListener):
-    def on_data(self, raw_data):
-        print(raw_data)
 
+    def on_status(self, status):
+        clean_text = TextPocessing.RefactorSearchStream(status)
         return
+
     def on_error(self, status_code,):
         if status_code == 420:
             print("The limit was exeeded")
