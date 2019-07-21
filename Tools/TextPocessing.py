@@ -1,5 +1,7 @@
 import re
 from urllib.request import urlopen
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.tokenize import sent_tokenize
 
 
 def RefactorSearchStream(status):
@@ -59,7 +61,25 @@ def extractURLs(text):    #Extracts provided urls and cleans them from text, sto
 def TextCleaning(text):    #This will clean the text of any hashtags emojies ect.
     clean_text = text
     for match in re.findall("\#|\@\w+|\W", text):
-        if (match != " "):
+        if (match not in [" ", ".", ",", "?", "!", "'", "$", "%"]):
             clean_text = clean_text.replace(match, " ")
     clean_text = clean_text.strip()
     return clean_text
+
+
+def PerformSentimentAnalysis(text):    #This will return simple VADER polarity score with value and compound percenta
+    sid = SentimentIntensityAnalyzer()
+    sentences = sent_tokenize(text)
+    score = 0
+    counter = 0
+    for x in sentences:
+        ss = sid.polarity_scores(x)
+        score += ss["compound"]
+        counter += 1
+    final_score = score / counter
+    if (final_score >= 0.30):
+        return {"positive":final_score}
+    elif (final_score <= -0.30):
+        return {"negative": final_score}
+    else:
+        return {"neutral": final_score}

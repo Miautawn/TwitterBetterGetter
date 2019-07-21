@@ -1,13 +1,8 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-from urllib.request import urlopen
 import tweepy
-import TwitterCredentials as TC
-import json
-import re
-import TextPocessing
-
+from Tools import TextPocessing, TwitterCredentials as TC
 
 auth = OAuthHandler(TC.consumer_key, TC.consumer_secret)
 auth.set_access_token(TC.access_key, TC.access_secret)
@@ -30,11 +25,16 @@ class TwitterAPI:
         print("Beginning to download the timeline...\n")
         print("/////////////////////////////////////\n")
         search_results = api.search(q=str(hash_tags), count=50, lang = "en", tweet_mode='extended')
-        clean_search = set(TextPocessing.RefactorSearchResults(search_results))   #self.RefactorSearchResults(search_results)
+        clean_search = set(TextPocessing.RefactorSearchResults(search_results))
+        clean_list = list(clean_search)
+        print("This is polarity test: sentence is: " + clean_list[0] + "\n")
+        print("The polarity is: " + str(TextPocessing.PerformSentimentAnalysis(clean_list[0]).keys()))
+        print("The score is: " + str(TextPocessing.PerformSentimentAnalysis(clean_list[0]).values()))
+
         print("/////////////////////////////////////\n")
         print("downloading finished, beginning the stream...\n")
         print("/////////////////////////////////////\n")
-        self.InitiateStream()
+        #self.InitiateStream()
 
 
 class StdOutListener(StreamListener):
