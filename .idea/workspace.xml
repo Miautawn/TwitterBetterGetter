@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaf058ca-d766-43cb-a759-7034d5bb3ef5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tools/HadoopClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextPocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/TextPocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimeStamp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TimeStamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TimeStamp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/TextPocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/TextPocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/TwitterCredentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/TwitterCredentials.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TweetDownloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/TweetDownloader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterCredentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/TwitterCredentials.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlsForScraper.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TweetDownloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
+            <state relative-caret-position="903">
+              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -37,11 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tools/TextPocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -49,8 +46,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tools/TwitterCredentials.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tools/HadoopClient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +84,11 @@
         <option value="$PROJECT_DIR$/UrlsForScraper.txt" />
         <option value="$PROJECT_DIR$/TextPocessing.py" />
         <option value="$PROJECT_DIR$/Tools/SentimentalAnalysis.py" />
-        <option value="$PROJECT_DIR$/TweetDownloader.py" />
+        <option value="$PROJECT_DIR$/Tools/TwitterCredentials.py" />
+        <option value="$PROJECT_DIR$/Tools/HadoopClient.py" />
+        <option value="$PROJECT_DIR$/TimeStamp.txt" />
         <option value="$PROJECT_DIR$/Tools/TextPocessing.py" />
+        <option value="$PROJECT_DIR$/TweetDownloader.py" />
       </list>
     </option>
   </component>
@@ -91,7 +103,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,6 +123,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,23 +214,28 @@
     <entry file="file://$PROJECT_DIR$/Test.py" />
     <entry file="file://$PROJECT_DIR$/Tools/UrlsForScraper.txt" />
     <entry file="file://$PROJECT_DIR$/Tools/TimeStamp.txt" />
-    <entry file="file://$PROJECT_DIR$/Tools/TwitterCredentials.py">
+    <entry file="file://$PROJECT_DIR$/Tools/SentimentalAnalysis.py" />
+    <entry file="file://$PROJECT_DIR$/Tools/HadoopClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+        <state relative-caret-position="255">
+          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/SentimentalAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tools/TextPocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tools/TwitterCredentials.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -227,8 +244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TweetDownloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
+        <state relative-caret-position="903">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
