@@ -77,7 +77,7 @@ def PerformSentimentAnalysis(text): #This will return simple VADER polarity scor
         score += ss["compound"]
         counter += 1
     try:
-        final_score = score / counter  #simple math
+        final_score = round(score / counter)  #simple math
         if (final_score >= 0.30):
             return ["positive",final_score]
         elif (final_score <= -0.30):
