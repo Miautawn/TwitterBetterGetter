@@ -47,6 +47,8 @@ class StdOutListener(StreamListener):   # Twitter API methods
     def on_error(self, status_code,):   #If something bad happens
         if status_code == 420:
             print("The limit was exeeded")
+        else:
+            print(status_code)
         sys.exit(0)
 
 if(__name__ == "__main__"): #START PROGRAM

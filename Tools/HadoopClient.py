@@ -6,7 +6,7 @@ from datetime import datetime
 client = InsecureClient("http://"+TwitterCredentials.HOST_IP+":50070", user=TwitterCredentials.USER)  #Dirrect link to the namenode utilities
 
 
-def WriteDataHadoop(dataList):
+def WriteDataHadoop(dataList):  #Will creade csv format file with 3 columns: Test; SentimentalAnalysisResult; Prediction score, and fill the rows with Twitter data
     try:
         list_text = []
         list_result = []

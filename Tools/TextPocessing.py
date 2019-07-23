@@ -77,13 +77,17 @@ def PerformSentimentAnalysis(text): #This will return simple VADER polarity scor
         ss = sid.polarity_scores(x)
         score += ss["compound"]
         counter += 1
-    final_score = score / counter  #simple math
-    if (final_score >= 0.30):
-        return ["positive",final_score]
-    elif (final_score <= -0.30):
-        return ["negative", final_score]
-    else:
-        return ["neutral", final_score]
+    try:
+        final_score = round(score / counter)  #simple math
+        if (final_score >= 0.30):
+            return ["positive",final_score]
+        elif (final_score <= -0.30):
+            return ["negative", final_score]
+        else:
+            return ["neutral", final_score]
+    except:
+        print("Division by zero, somehow...")
+        return ["neutral", 0.0]
 
 def PrepeareForDataTransfer(tweets):    #this method will make the necessary steps to import data to Hadoop
     final_list = []
