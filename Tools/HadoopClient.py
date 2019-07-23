@@ -15,8 +15,11 @@ def WriteDataHadoop(dataList):
             list_text.append(item[0])
             list_result.append(item[1][0])
             list_score.append(item[1][1])
-        DataFrame = pd.DataFrame(data={"Text": list_text, "SentimentResult":list_result, "Prediction_score": list_score})
-        with client.write("/user/hdfs/TBG/warehouse/"+str(datetime.now()).replace(" ", "_").replace(":", ".")+".csv", encoding='utf-8') as writer:
+        DataFrame = pd.DataFrame(data={"Text":
+        list_text, "SentimentResult":list_result, "Prediction_score": list_score})
+        with client.write("/user/hdfs/TBG/warehouse/"+
+        str(datetime.now()).replace(" ", "_").replace(":", ".")+
+        ".csv", encoding='utf-8') as writer:
             DataFrame.to_csv(writer)
     except Exception as e:
         print("Something went wrong..." + str(e))

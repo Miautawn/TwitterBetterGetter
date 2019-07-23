@@ -25,7 +25,7 @@ class TwitterAPI:
         print("/////////////////////////////////////\n")
         print("Beginning to download the timeline...\n")
         print("/////////////////////////////////////\n")
-        search_results = api.search(q=str(tags), count=50, lang = "en", tweet_mode='extended')
+        search_results = api.search(q=str(tags), count=100, lang = "en", tweet_mode='extended')
         clean_search = set(TextPocessing.RefactorSearchResults(search_results))
         TextPocessing.PrepeareForDataTransfer(list(clean_search))
         print("/////////////////////////////////////\n")

@@ -67,6 +67,7 @@ def TextCleaning(text):    #This will clean the text of any hashtags emojies ect
     return clean_text
 
 
+
 def PerformSentimentAnalysis(text): #This will return simple VADER polarity score with value and compound percentage
     sid = SentimentIntensityAnalyzer()
     sentences = sent_tokenize(text)
