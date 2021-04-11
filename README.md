@@ -1,5 +1,5 @@
 # TwitterBetterGetter
-Python program that searches the Twitter for CyberSecurity news and pulls them to Hadoop data warehouse 
+Python program that searches the Twitter for CyberSecurity news, pulls them, applies sentiment analysis and stores them to Hadoop data warehouse 
 
 # Functionality
 Please check the "Practikos užduotis.docx" for a formated documentation
